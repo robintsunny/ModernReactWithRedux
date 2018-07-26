@@ -13,14 +13,14 @@ class PostsIndex extends React.Component {
         return _.map(this.props.posts, post => {
             return (
                 <li className="lit-group-item" key={post.id}>
-                    {post.title}
+                    <Link to={`/posts/${post.id}`}>{post.title}</Link>
                 </li>
             )
         })
     }
 
     render() {
-        console.log(this.props.posts)
+
         return (
             <div>
                 <div className="text-xs-right">

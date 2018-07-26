@@ -27,7 +27,11 @@ class PostsNew extends React.Component {
     }
 
     onSubmit(values) {
-        this.props.createPost(values)
+        this.props.createPost(values).then( () => {
+
+            this.props.history.push('/')
+        })
+        
     }
     
     render () {
